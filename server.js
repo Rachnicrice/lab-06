@@ -20,14 +20,31 @@ app.get('/location', (request, response) => {
   }
 
   catch(error) {
-    console.error(error);
-    response.status(500).send('Oops! Something went wrong! Please try again in 401');
+    Error(error, response);
   }
 });
 
-app.get('*', (request, response) => {
-  response.status(404).send('Where are you?')
+app.get('/weather', (request, response) => {
+  console.log('You found clouds!')
+  try {
+    const weatherData = searchWeather();
+
+    response.send(weatherData);
+  }
+
+  catch(error) {
+    Error(error, response);
+  }
 })
+
+app.get('*', (request, response) => {
+  response.status(404).send('Wrong path Dorothy.')
+})
+
+function Error (error, response) {
+  console.error(error);
+  return response.status(500).send('Oops! Something went wrong! Please try again in 401');
+}
 
 function searchLattoLng (location) {
   const geoData = require('./data/geo.json');
@@ -35,6 +52,28 @@ function searchLattoLng (location) {
   const cityObject = new CityLocation (location, geoData);
 
   return cityObject;
+}
+
+function searchWeather () {
+  const darksky = require('./data/darksky.json');
+  let weatherForecasts = [];
+
+  for (let i = 0; i < 5; i++) {
+    let weatherObject = new Forecast (darksky, i);
+
+    weatherForecasts.push(weatherObject)
+  }
+
+  console.log(weatherForecasts)
+  return weatherForecasts;
+}
+
+function Forecast (moreData, i) {
+  let utcTime = moreData.daily.data[i].time;
+  console.log(utcTime)
+
+  this.forecast = moreData.daily.data[i].summary
+  this.time = new Date (utcTime*1000).toDateString();
 }
 
 function CityLocation (cityName, someData) {
