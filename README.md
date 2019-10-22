@@ -18,12 +18,19 @@ We will be using Javascript and Node.js to build this server.
 ## Change Log
 
 10-22-2019 9:50am - Application now has a fully-functional express server, with a GET route for the location resource.
+10-22-2019 11:18am - Application now has a GET route for the weather resource. 
 
 #### Feature #1: Locations
 - Time Estimated: 1 hour 30 minutes
 - Start Time: 9:00am
 - End Time: 9:50am
 - Actual Time: 50 minutes
+
+#### Feature #2: Weather
+- Time Estimated: 1 hour 30 minutes
+- Start Time: 10:00am
+- End Time: 11:18am
+- Actual Time: 1 hour 18 minutes
 
 ## Credits and Collaborations
 In collaboration with Lucas Wilber
