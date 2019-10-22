@@ -32,5 +32,12 @@ We will be using Javascript and Node.js to build this server.
 - End Time: 11:18am
 - Actual Time: 1 hour 18 minutes
 
+#### Feature #2: Errors
+- Time Estimated: 30 minutes
+- Start Time: 11:18am
+- End Time: 11:36am
+- Actual Time: 18 minutes
+
 ## Credits and Collaborations
 In collaboration with Lucas Wilber
+Assisted by Chris L Chapman
