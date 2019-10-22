@@ -39,5 +39,5 @@ We will be using Javascript and Node.js to build this server.
 - Actual Time: 18 minutes
 
 ## Credits and Collaborations
-In collaboration with Lucas Wilber
+In collaboration with Lucas Wilber,
 Assisted by Chris L Chapman
