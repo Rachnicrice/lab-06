@@ -16,9 +16,14 @@ Based on user input location use lattitude and longitude to request weather data
 We will be using Javascript and Node.js to build this server.
 
 ## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource.
+10-22-2019 9:50am - Application now has a fully-functional express server, with a GET route for the location resource.
+
+#### Feature #1: Locations
+- Time Estimated: 1 hour 30 minutes
+- Start Time: 9:00am
+- End Time: 9:50am
+- Actual Time: 50 minutes
 
 ## Credits and Collaborations
 In collaboration with Lucas Wilber
