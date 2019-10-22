@@ -40,4 +40,4 @@ We will be using Javascript and Node.js to build this server.
 
 ## Credits and Collaborations
 In collaboration with Lucas Wilber,
-Assisted by Chris L Chapman
+assisted by Chris L Chapman
