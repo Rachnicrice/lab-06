@@ -26,6 +26,7 @@ app.get('/location', (request, response) => {
 });
 
 app.get('/weather', (request, response) => {
+  console.log('You found clouds!')
   try {
     const weatherData = searchWeather();
 
@@ -38,9 +39,9 @@ app.get('/weather', (request, response) => {
   }
 })
 
-app.get('*', (request, response) => {
-  response.status(404).send('Where are you?')
-})
+// app.get('*', (request, response) => {
+//   response.status(404).send('Where are you?')
+// })
 
 function searchLattoLng (location) {
   const geoData = require('./data/geo.json');
@@ -65,10 +66,11 @@ function searchWeather () {
 }
 
 function Forecast (moreData, i) {
-  let utcTime = moreData.daily.data[i].time
+  let utcTime = moreData.daily.data[i].time;
+  console.log(utcTime)
 
   this.forecast = moreData.daily.data[i].summary
-  this.time = new Date(utcTime);
+  this.time = new Date (utcTime*1000).toDateString();
 }
 
 function CityLocation (cityName, someData) {
