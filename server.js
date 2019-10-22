@@ -20,8 +20,7 @@ app.get('/location', (request, response) => {
   }
 
   catch(error) {
-    console.error(error);
-    response.status(500).send('Oops! Something went wrong! Please try again in 401');
+    Error(error, response);
   }
 });
 
@@ -34,14 +33,18 @@ app.get('/weather', (request, response) => {
   }
 
   catch(error) {
-    console.error(error);
-    response.status(500).send('Oops! Something went wrong! Please try again in 401');
+    Error(error, response);
   }
 })
 
-// app.get('*', (request, response) => {
-//   response.status(404).send('Where are you?')
-// })
+app.get('*', (request, response) => {
+  response.status(404).send('Wrong path Dorothy.')
+})
+
+function Error (error, response) {
+  console.error(error);
+  return response.status(500).send('Oops! Something went wrong! Please try again in 401');
+}
 
 function searchLattoLng (location) {
   const geoData = require('./data/geo.json');
