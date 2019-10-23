@@ -14,6 +14,7 @@ let locations = {};
 
 app.get('/location', handleLocation);
 app.get('/weather', handleWeather);
+app.get('/events', handleEvents);
 
 app.get('*', (request, response) => {
   response.status(404).send('Wrong path Dorothy.')
@@ -61,6 +62,20 @@ function handleWeather (request, response) {
     .catch((error) => {
       Error(error, response);
     })
+}
+
+function handleEvents (request, response) {
+
+}
+
+function Event (otherData) {
+  // {
+  //   "link": "https://www.eventbrite.com/seattlejshackers/events/253823797/",
+  //   "name": "SeattleJS Hackers",
+  //   "event_date": "Wed Apr 23 2014",
+  //   "summary": "Come and meet other JS hackers at the Code Fellows campus!"
+  // }
+  
 }
 
 function Forecast (moreData) {
