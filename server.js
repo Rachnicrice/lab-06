@@ -14,7 +14,7 @@ let locations = {};
 
 app.get('/location', handleLocation);
 app.get('/weather', handleWeather);
-app.get('/events', handleEvents);
+app.get('/yelp', handleYelp);
 
 app.get('*', (request, response) => {
   response.status(404).send('Wrong path Dorothy.')
@@ -64,11 +64,17 @@ function handleWeather (request, response) {
     })
 }
 
-function handleEvents (request, response) {
+function handleYelp (request, response) {
+const locationObj = request.query.data;
+const url = `https://api.yelp.com/v3/businesses/search?location=${locationObj.search_query}`
 
+superagent.get(url).set('Authorization: Bearer', `${process.env.YELP_API_KEY}`);
+  .then(resultsFromAPI => {
+    console.log(rewultsFromAPI.body)
+  })
 }
 
-function Event (otherData) {
+function Yelp (otherData) {
   // {
   //   "link": "https://www.eventbrite.com/seattlejshackers/events/253823797/",
   //   "name": "SeattleJS Hackers",
