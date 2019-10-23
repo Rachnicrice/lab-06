@@ -19,6 +19,7 @@ We will be using Javascript and Node.js to build this server.
 
 10-22-2019 9:50am - Application now has a fully-functional express server, with a GET route for the location resource.
 10-22-2019 11:18am - Application now has a GET route for the weather resource. 
+10-23-2019 9:50am - Reformatted GET routes to use handler functions. Updated the handleWeather function to use .map()
 
 #### Feature #1: Locations
 - Time Estimated: 1 hour 30 minutes
@@ -37,6 +38,12 @@ We will be using Javascript and Node.js to build this server.
 - Start Time: 11:18am
 - End Time: 11:36am
 - Actual Time: 18 minutes
+
+### Feature #1, #2 & #3: Data Formatting, Locations & Weather
+- Time Estimated: 1 hour
+- Start Time: 9:20am
+- End Time: 9:50am
+- Actual Time: 30 minutes
 
 ## Credits and Collaborations
 In collaboration with Lucas Wilber,
