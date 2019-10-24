@@ -47,6 +47,24 @@ We will be using Javascript and Node.js to build this server.
 - End Time: 9:50am
 - Actual Time: 30 minutes
 
+### Feature #1: Database
+- Time Estimated: 
+- Start Time:
+- End Time:
+- Actual Time:
+
+### Feature #2: Server
+- Time Estimated:
+- Start Time:
+- End Time:
+- Actual Time:
+
+### Feature #3: Deploy
+- Time Estimated:
+- Start Time:
+- End Time:
+- Actual Time:
+
 ## Credits and Collaborations
 In collaboration with Lucas Wilber,
 assisted by Chris L Chapman
