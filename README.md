@@ -23,6 +23,12 @@ We will be using Javascript and Node.js to build this server.
 
 10-23-2019 9:50am - Reformatted GET routes to use handler functions. Updated the handleWeather function to use .map()
 
+10-24-2019 10:01am - Application now has database persistance
+
+10-24-2019 12:38pm - Application is now querying the database, and pulling data from the database when available.
+
+10-24-2019 1:00pm - Database is now deployed to Heroku
+
 #### Feature #1: Locations
 - Time Estimated: 1 hour 30 minutes
 - Start Time: 9:00am
@@ -48,23 +54,23 @@ We will be using Javascript and Node.js to build this server.
 - Actual Time: 30 minutes
 
 ### Feature #1: Database
-- Time Estimated: 
-- Start Time:
-- End Time:
-- Actual Time:
+- Time Estimated: 45 minutes
+- Start Time: 9:18am
+- End Time: 10:01am
+- Actual Time: 42 minutes
 
 ### Feature #2: Server
-- Time Estimated:
-- Start Time:
-- End Time:
-- Actual Time:
+- Time Estimated: 2 hours
+- Start Time: 10:05am
+- End Time: 12:38pm
+- Actual Time: 2 hours 33 minutes
 
 ### Feature #3: Deploy
-- Time Estimated:
-- Start Time:
-- End Time:
-- Actual Time:
+- Time Estimated: 1 hour
+- Start Time: 12:43pm
+- End Time: 1:00pm
+- Actual Time: 17 minutes
 
 ## Credits and Collaborations
-In collaboration with Lucas Wilber,
-assisted by Chris L Chapman
+In collaboration with Ashlyn Morin
+assisted by Chris Chapman and Erin Trainer
