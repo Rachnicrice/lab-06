@@ -1,9 +1,8 @@
-DROP TABLE people;
-CREATE TABLE IF NOT EXISTS people(
+DROP TABLE locations;
+CREATE TABLE IF NOT EXISTS locations(
   id SERIAL PRIMARY KEY,
-  first_name VARCHAR(255),
-  last_name VARCHAR(255)
+ search_query VARCHAR(255),
+ formatted_query VARCHAR(255),
+ latitude NUMERIC,
+ longitude NUMERIC
 );
-
-INSERT INTO people (first_name, last_name) VALUES ('Roz', 'Johnson');
-SELECT * FROM people;
