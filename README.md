@@ -18,7 +18,9 @@ We will be using Javascript and Node.js to build this server.
 ## Change Log
 
 10-22-2019 9:50am - Application now has a fully-functional express server, with a GET route for the location resource.
+
 10-22-2019 11:18am - Application now has a GET route for the weather resource. 
+
 10-23-2019 9:50am - Reformatted GET routes to use handler functions. Updated the handleWeather function to use .map()
 
 #### Feature #1: Locations
