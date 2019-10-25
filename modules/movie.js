@@ -25,7 +25,7 @@ function Movie (allData) {
   this.overview = allData.overview;
   this.average_votes = allData.vote_average;
   this.total_votes = allData.vote_count;
-  this.image_url = allData.poster_path;
+  this.image_url = `https://image.tmdb.org/t/p/w500${allData.poster_path}`;
   this.popularity = allData.popularity;
   this.released_on = allData.release_date;
 }
