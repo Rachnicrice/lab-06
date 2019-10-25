@@ -71,6 +71,24 @@ We will be using Javascript and Node.js to build this server.
 - End Time: 1:00pm
 - Actual Time: 17 minutes
 
+### Feature #1: Movies
+- Time Estimated: 1 hour
+- Start Time: 10:20am
+- End Time: 11:08am
+- Actual Time: 48 minutes
+
+### Feature #2: Yelp
+- Time Estimated: 30 minutes
+- Start Time: 10:12am
+- End Time: 10:18am
+- Actual Time: 6 minutes
+
+### Feature #3: Refactor
+- Time Estimated: 30 minutes
+- Start Time: 9:30am
+- End Time: 9:56am
+- Actual Time: 26 minutes
+
 ## Credits and Collaborations
 In collaboration with Ashlyn Morin
 assisted by Chris Chapman and Erin Trainer
