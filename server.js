@@ -15,11 +15,13 @@ const handleLocation = require('./modules/location.js');
 const handleWeather = require('./modules/weather.js');
 const handleTrails = require('./modules/trails.js');
 const handleYelp = require('./modules/yelp.js')
+const handleMovies = require('./modules/movie.js');
 
 app.get('/location', handleLocation);
 app.get('/weather', handleWeather);
 app.get('/yelp', handleYelp);
 app.get('/trails', handleTrails);
+app.get('/movies', handleMovies);
 
 app.get('*', notFound);
 app.use(errorHandler);

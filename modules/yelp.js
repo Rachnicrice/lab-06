@@ -9,7 +9,6 @@ function handleYelp (request, response) {
 
   superagent.get(url).set(`Authorization`, `Bearer ${process.env.YELP_API_KEY}`)
     .then(resultsFromAPI => {
-      console.log(resultsFromAPI.body.businesses)
       const yelpData = resultsFromAPI.body.businesses.map( businesses => {
         return new Business (businesses);
       })
@@ -19,6 +18,11 @@ function handleYelp (request, response) {
     .catch((error) => {
       Error(error, response)
     })
+}
+
+function Error(error, response) {
+  console.error(error);
+  return response.status(500).send('Oops! Something went wrong! Please try again in 401');
 }
 
 function Business (otherData) {

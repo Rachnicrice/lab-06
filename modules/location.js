@@ -15,14 +15,13 @@ function queryDatabase(request, response, url) {
   return client.query(SQL, value)
     .then(results => {
       if (results.rowCount > 0) {
-        console.log('from table',results.rows[0]);
+        console.log('from database');
         response.status(200).send(results.rows[0]);
       } else {
         console.log('getting data from API');
         superagent.get(url)
           .then(resultsFromAPI => {
             const locationObj = new CityLocation(request, resultsFromAPI.body.results[0]);
-            console.log(locationObj);
 
             addToDatabase(locationObj, response);
 
