@@ -8,6 +8,7 @@ function handleTrails(request, response) {
 
   superagent.get(url)
     .then(resultsFromAPI => {
+      console.log(resultsFromAPI.body.trails);
       const trailsData = resultsFromAPI.body.trails.map(data => {
         return new Trail(data);
       });
@@ -25,15 +26,18 @@ function Error(error, response) {
 }
 
 function Trail(data) {
-  this.name = data.location;
-  this.location = data.length;
+  let conditions = data.conditionDate.split(' ');
+
+  this.name = data.name;
+  this.location = data.location;
+  this.length = data.length;
   this.stars = data.stars;
   this.star_votes = data.starVotes;
   this.summary = data.summary;
   this.trail_url = data.url;
   this.conditions = data.conditionStatus;
-  this.condition_date = data.conditionDate;
-  this.condition_time = data.conditionDate;
+  this.condition_date = conditions[0];
+  this.condition_time = conditions[1];
 }
 
 module.exports = handleTrails;

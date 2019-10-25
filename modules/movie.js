@@ -9,7 +9,6 @@ function handleMovies (request, response) {
 
   superagent.get(url)
     .then( resultsFromAPI => {
-      console.log(resultsFromAPI.body.results);
       const movieData = resultsFromAPI.body.results.map( movie => {
         return new Movie (movie);
       })
