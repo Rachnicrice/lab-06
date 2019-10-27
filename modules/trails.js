@@ -8,10 +8,12 @@ function handleTrails(request, response) {
 
   superagent.get(url)
     .then(resultsFromAPI => {
+    //Creating an array of the trails and returning data to the webpage
       console.log(resultsFromAPI.body.trails);
       const trailsData = resultsFromAPI.body.trails.map(data => {
         return new Trail(data);
       });
+
       response.status(200).send(trailsData);
     })
 
@@ -20,11 +22,13 @@ function handleTrails(request, response) {
     });
 }
 
+//Response status for unexpected failures
 function Error(error, response) {
   console.error(error);
   return response.status(500).send('Oops! Something went wrong! Please try again in 401');
 }
 
+//Constructor function for data recieved from Trails API
 function Trail(data) {
   let conditions = data.conditionDate.split(' ');
 

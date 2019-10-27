@@ -9,6 +9,7 @@ function handleWeather(request, response) {
 
   superagent.get(url)
     .then(resultsFromAPI => {
+    //Creating an array of the weather and returning data to the webpage
       const weatherData = resultsFromAPI.body.daily.data.map(dayInfo => {
         return new Forecast(dayInfo);
       });
@@ -20,11 +21,13 @@ function handleWeather(request, response) {
     });
 }
 
+//Response status for unexpected failures
 function Error(error, response) {
   console.error(error);
   return response.status(500).send('Oops! Something went wrong! Please try again in 401');
 }
 
+//Constructor function for weather data recieved from API
 function Forecast(moreData) {
   let utcTime = moreData.time * 1000;
 
